@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <button id="java">java</button>
+<button id="css">css</button>   
+<button id="javascript">javascript</button>
+<button id="sql">sql</button>
+<button id="no">NO </button>
+<p id="result"></p>
+
+<script>
+   let btns = document.querySelectorAll('button[id]');
+for (const btn of btns) {
+btn.onclick = showExplanation;
+}
+function showExplanation(){
+let explanation = getExplanation(this.id)
+result.textContent = explanation;
+}
+function getExplanation(item){
+const explanations = {
+ 
+    java:("java tutorial Our Core Java programming tutorial is designed for students and working professionals. Java is an object-oriented, class-based, concurrent, secured and general-purpose computer programming language. It is a widely used robust technology.    What is Java?Java is a programming language and a platform. Java is a high-level, robust, object-oriented and secure programming language.Java was developed by Sun Microsystems (which is now a subsidiary of Oracle) in the year 1995. James Gosling is known as the father of Java. Before Java, its name was Oak. Since Oak was already a registered company, so James Gosling and his team changed the name from Oak to Java.Platform: Any hardware or software environment in which a program runs is known as a platform. Since Java has a runtime environment (JRE) and API, it is called a platform.Java Example","Let's have a quick look at the Java programming example. A detailed description of the Hello World! example is available on the next page.Hey, Compile and Rpublic class Main{  public static void main(String args[]){  System.out.println Hello, World!}  }  Getting StartedBefore diving into coding, we will need to set up your development environment. Java development typically requires the Java Development Kit (JDK), which includes the Java compiler and other essential tools. You can download the JDK from the official Oracle website and follow the installation instructions for your operating system."),
+    css:(" CSS Tutorial CSS tutorial CSS tutorial or CSS 3 tutorial provides basic and advanced concepts of CSS technology. Our CSS tutorial is developed for beginners and professionals. The major points of CSS are given below:CSS stands for Cascading Style Sheet.CSS is used to design HTML tags.CSS is a widely used language on the web.HTML, CSS and JavaScript are used for web designing. It helps the web designers to apply style on HTML tags.CSS Example with CSS EditorIn this tutorial, you will get a lot of CSS examples, you can edit and run these examples with our online CSS editor tool."),
+    javascript:("JavaScript Tutorial JavaScript Tutorial Our JavaScript Tutorial is designed for beginners and professionals. JavaScript is used to create client-side dynamic pages. JavaScript is an object-based scripting language that is lightweight and cross-platform.What is JavaScript? JavaScript (JS) is a programming language that lets developers create interactive web pages. JavaScript is a lightweight, object-oriented programming language that is used by several websites for scripting webpages.JavaScript is an interpreted language that executes code line by line, providing more flexibility. It is a single-threaded language that executes one task at a time. JavaScript builds upon other programming languages, updating them based on user interactions and other input."),
+    sql:("What is SQL? SQL is a short-form of the structured query language, and it is pronounced as S-Q-L or sometimes as This database language is mainly designed for maintaining the data in relational database management systems. It is a special tool used by data professionals for handling structured data (data which is stored in the form of tables). It is also designed for stream processing in RDSMS.You can easily create and manipulate the database, access and modify the table rows and columns, etc. This query language became the standard of ANSI in the year of 1986 and ISO in the year of 1987.If you want to get a job in the field of data science, then it is the most important query language to learn. Big enterprises like Facebook, Instagram, and LinkedIn, use SQL for storing the data in the back-end.How SQL Works? When we are executing the command of SQL on any Relational database management system, then the system automatically finds the best routine to carry out our request, and the SQL engine determines how to interpret that particular command.Structured Query Language contains the following four components in its process: Query Dispatcher Optimization Engines Classic Query Engine SQL Query Engine, etc.A classic query engine allows data professionals and users to maintain non-SQL queries. The architecture of SQL is shown in the following diagram:"),
+
+};
+return explanations[item]??'no question';
+}
+</script>
+</body>
+</html>
