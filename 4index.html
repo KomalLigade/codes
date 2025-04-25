@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            background-color: blue;
+            width: 100px;
+            height: 100px;
+            animation: moving 10s ;
+            position: relative;
+        }
+        @keyframes moving {
+            0%{background-color: blue;left:0px;top:0px}
+            100%{background-color:yellow;left:600px;top:0px}
+        }
+    </style>
+</head>
+<body>
+    <h1 id="move"></h1>
+</body>
+</html>

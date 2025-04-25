@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        i=0
+        x=0
+        function onlieexam(){
+            question=[2*2,7-4,9+5,2/7,"what is java"]
+
+            ans=["4","3","14","0.2"]
+            uan=document.getElementById("an").value;
+
+            if(i<=5){
+                document.getElementById("que").innerHTML=question[i+1];
+                if(ans[x-1]==uan)
+                document.getElementById("res").innerHTML="Ans is correct";
+            else
+               document.getElementById("res").innerHTML="Ans is not correst";
+            }
+            if(i>=6)
+            document.getElementById("que").innerHTML="Examination End";
+        i++;
+        x++
+        }
+    </script>
+
+</head>
+<body>
+
+    <h1 id="que"></h1>
+    <input type="text" id="an">
+    <button onclick="onlineexam()">Clickme</button>
+    <h2 id="res"></h2>
+    
+</body>
+</html>

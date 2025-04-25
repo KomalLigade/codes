@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            background-color: green;
+            height: 100px;
+            width: 100px;
+        }    
+    
+        h1{
+            background-color: yellow;
+            height: 100px;
+            width: 100px; 
+        } 
+
+    </style>
+    <script>
+        function redcolr()
+        {
+            document.getElementById('col').innerHTML="Hi this is box"
+            document.getElementById('col').style.backgroundColor="red"
+
+        if (bluecolor())
+        {
+            document.getElementById('color').innerHTML="Hi this is 2 box"
+            document.getElementById('color').style.backgroundColor="blue"
+
+        }
+    }
+        
+    </script>
+</head>
+<body>
+    <h1 id="col"></h1> 
+    <br></br>
+
+    <h1 id="color"></h1>
+    <br></br>
+
+    <button onclick="redcolr()">Red</button>
+    <br></br>
+
+    <button onclick="bluecolor()">blue</button>
+    <br></br>
+</body>
+</html>

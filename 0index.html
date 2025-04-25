@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <script>
+
+        function myfunction(){
+           let num1 = document.getElementById('num1').value;
+           let num2 = document.getElementById('num2').value;
+           let calculate = document.getElementById('calculate').value;
+    
+           if(calculate==='+'){
+            let num1 = document.getElementById('num1').value;
+            let num2 = document.getElementById('num2').value;
+            document.getElementById('result').value=(parseInt(num1)+parseInt(num2));
+           }
+           
+           if(calculate==='-'){
+            let num1 = document.getElementById('num1').value;
+            let num2 = document.getElementById('num2').value;
+            document.getElementById('result').value=num1-num2;
+           }
+    
+           if(calculate==='*'){
+            let num1 = document.getElementById('num1').value;
+            let num2 = document.getElementById('num2').value;
+            document.getElementById('result').value=num1*num2;
+           }
+    
+           if(calculate==='/'){
+            let num1 = document.getElementById('num1').value;
+            let num2 = document.getElementById('num2').value;
+            document.getElementById('result').value=num1/num2;
+           }
+        }
+        </script>
+</head>
+
+<body>
+    <h2> create simple calculator</h2>
+
+    value 1 <input type="number" id="num1">
+    <br></br>
+    value 2<input type="number" id="num2">
+    <br></br>
+
+    <select id="calculate">
+
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+
+    </select><br></br>
+    
+
+    <button onclick=myfunction()>calculate</button>
+    <input type="number" id="result">
+
+    
+</html>
+</body>
