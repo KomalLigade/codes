@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Create a Table</title>
+  <style>
+    body { margin: 30px; }
+    table { border-collapse: collapse; }
+    td { border: 1px solid black; padding: 8px; }
+  </style>
+</head>
+<body>
+  <input type="number" id="rows" placeholder="Rows" min="1">
+  <input type="number" id="cols" placeholder="Columns" min="1">
+  <button onclick="createTable()">Create Table</button>
+  <table id="myTable" border="1"></table>
+
+  <script>
+    function createTable() {
+      const rows = parseInt(document.getElementById("rows").value);
+      const cols = parseInt(document.getElementById("cols").value);
+      const table = document.getElementById("myTable");
+      table.innerHTML = ""; // Clear previous table
+
+      for (let i = 0; i < rows; i++) {
+        const row = table.insertRow();
+        for (let j = 0; j < cols; j++) {
+          const cell = row.insertCell();
+          
+        }
+      }
+    }
+  </script>
+</body>
+</html>

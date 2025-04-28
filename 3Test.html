@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <script>
+
+function countVowels(str) {
+    const vowels = ['a', 'e', 'i', 'o', 'u'];
+    let count = 0;
+    for (const char of str.toLowerCase()) {
+        if (vowels.includes(char)) {
+            count++;
+        }
+    }
+    return count;
+}
+
+// Example usage:
+console.log(countVowels('The quick brown fox')); // Output: 5
+
+
+        </script>
+
+</body>
+</html>

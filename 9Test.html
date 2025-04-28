@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Hover Effect</title>
+  <style>
+    #hoverDiv {
+      width: 200px;
+      height: 100px;
+      background: lightgray;
+    }
+  </style>
+</head>
+<body>
+  <div id="hoverDiv" onmouseenter="changeColor(this)" onmouseleave="resetColor(this)">
+    Hover over me!
+  </div>
+
+  <script>
+    function changeColor(element) {
+      element.style.background = "lightblue";
+    }
+    function resetColor(element) {
+      element.style.background = "lightgray";
+    }
+  </script>
+</body>
+</html>

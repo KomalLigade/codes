@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <script>
+        function generateCombinations(str) {
+    let combinations = [];
+    for (let i = 0; i < str.length; i++) {
+        for (let j = i + 1; j <= str.length; j++) {
+            combinations.push(str.slice(i, j));
+        }
+    }
+    return combinations.join(',');
+}
+
+// Example usage:
+console.log(generateCombinations('dog'));
+    </script>
+
+</body>
+</html>
+
+    

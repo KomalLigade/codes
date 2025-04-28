@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Canvas Drawing</title>
+</head>
+<body>
+  <canvas id="myCanvas" width="300" height="200" style="border:1px solid black"></canvas>
+
+  <script>
+    const canvas = document.getElementById("myCanvas");
+    const ctx = canvas.getContext("2d");
+
+    // Draw a simple triangle
+    ctx.beginPath();
+    ctx.moveTo(100, 50);  // Start at (100, 50)
+    ctx.lineTo(50, 150);  // Line to (50, 150)
+    ctx.lineTo(150, 150); // Line to (150, 150)
+    ctx.closePath();      // Close the path (back to start)
+    ctx.stroke();         // Draw the outline
+  </script>
+</body>
+</html>

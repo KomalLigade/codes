@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <script>
+
+function findSecondLowestAndGreatest(arr) {
+    if (arr.length < 2) return "Array should have at least two numbers";
+    
+    const sortedArr = [...new Set(arr)].sort((a, b) => a - b);
+    if (sortedArr.length < 2) return "All elements are the same";
+    
+    const secondLowest = sortedArr[1];
+    const secondGreatest = sortedArr[sortedArr.length - 2];
+    return `${secondLowest},${secondGreatest}`;
+}
+
+// Example usage:
+console.log(findSecondLowestAndGreatest([1, 2, 3, 4, 5])); // Output: 2,4
+
+
+
+        </script>
+
+</body>
+</html>
